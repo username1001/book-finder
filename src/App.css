@@ -1,0 +1,23 @@
+.main {
+  text-align: center;
+}
+
+.main h1 {
+  font-family: 'Crimson Text', serif;
+  letter-spacing: 4px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid;
+  width: 55%;
+}
+
+.btn {
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 8px;
+  border: 1px solid;
+  width: 200px;
+  font-weight: 900;
+}
