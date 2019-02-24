@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Search from './components/Search';
+import BookDisplay from './components/BookDisplay';
+import Footer from './components/Footer';
 import './App.css';
 
 class App extends Component {
@@ -14,14 +16,16 @@ class App extends Component {
           <Search />
         </div>
         <div className="book-display">
-          <p>
-            There's nothing here yet! Try searching for a book.{' '}
-            <span class="magnify-icon">&#9906;</span>
-          </p>
+          <Message />
         </div>
+        <Footer />
       </div>
     );
   }
 }
+
+const Message = () => {
+  return <p>There's nothing here yet! Try searching for a book.</p>;
+};
 
 export default App;
