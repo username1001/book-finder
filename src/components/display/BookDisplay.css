@@ -1,0 +1,27 @@
+.books {
+  display: inline-block;
+  width: 200px;
+  /* height: 200px; */
+  padding: 10px;
+  margin: 5px;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  text-align: left;
+  position: relative;
+}
+.books a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.author {
+  font-weight: 900;
+}
+
+.publisher {
+  color: #888;
+  font-size: 0.9em;
+}
+
+.book-img {
+}

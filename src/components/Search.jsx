@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Button from './Button';
-import BookDisplay from './BookDisplay';
+import BookDisplay from './display/BookDisplay';
 import ErrorBoundary from './ErrorBoundary';
 
 const PATH_BASE = 'https://www.googleapis.com/books/v1/volumes';
@@ -21,6 +21,10 @@ export default class Search extends Component {
     fetch(`${PATH_BASE}?q=${query}`)
       .then(response => response.json())
       .then(json => {
+        if (!query) {
+          alert('Please enter a search term.');
+          return;
+        }
         let { items } = json;
         this.setState({ items });
         console.log(items);
@@ -33,6 +37,7 @@ export default class Search extends Component {
 
   render() {
     const { query } = this.state.query;
+    const { items } = this.state.items;
     return (
       <div className="form">
         <input
@@ -41,7 +46,6 @@ export default class Search extends Component {
           onChange={this.onSearchChange}
         />
         <Button onClick={() => this.fetchQuery(query)}>Search</Button>
-        {/* <p>{JSON.stringify(this.state.items[0])}</p> */}
         <ErrorBoundary>
           <BookDisplay items={this.state.items} />
         </ErrorBoundary>

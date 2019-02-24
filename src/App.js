@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Search from './components/Search';
-import BookDisplay from './components/BookDisplay';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -15,9 +14,7 @@ class App extends Component {
         <div className="search-area">
           <Search />
         </div>
-        <div className="book-display">
-          <Message />
-        </div>
+        <div className="book-display">{/* <Message /> */}</div>
         <Footer />
       </div>
     );
