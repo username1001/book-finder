@@ -24,6 +24,8 @@ header p {
 input {
   padding: 10px;
   border: 1px solid;
+  font-weight: 900;
+  color: #555;
   width: 55%;
 }
 

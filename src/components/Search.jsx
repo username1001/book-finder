@@ -47,9 +47,9 @@ export default class Search extends Component {
         />
         <Button onClick={() => this.fetchQuery(query)}>Search</Button>
         {/* <p>{JSON.stringify(this.state.items[0])}</p> */}
-        {/* <ErrorBoundary>
+        <ErrorBoundary>
           <BookDisplay items={this.state.items} />
-        </ErrorBoundary> */}
+        </ErrorBoundary>
       </div>
     );
   }

@@ -28,7 +28,7 @@ import book from '../assets/book.png';
 //   }
 // }
 
-function BookDisplay(props) {
+const BookDisplay = props => {
   return (
     <div>
       {props.items.map(item => {
@@ -51,6 +51,6 @@ function BookDisplay(props) {
       })}
     </div>
   );
-}
+};
 
 export default BookDisplay;
