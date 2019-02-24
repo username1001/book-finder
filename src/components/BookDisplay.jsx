@@ -34,7 +34,7 @@ const BookDisplay = props => {
       {props.items.map(item => {
         let {
           title,
-          author,
+          authors,
           publisher,
           imageLinks,
           infoLink
@@ -42,10 +42,10 @@ const BookDisplay = props => {
         return (
           <div>
             <h1>{title}</h1>
-            <h3>{author}</h3>
+            <h3>{authors}</h3>
             <p>{publisher}</p>
             <a href={infoLink}>Visit</a>
-            <img src={imageLinks} alt={title} />
+            <img src={imageLinks.thumbnail} alt={title} />
           </div>
         );
       })}

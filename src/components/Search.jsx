@@ -16,11 +16,6 @@ export default class Search extends Component {
     this.onSearchChange = this.onSearchChange.bind(this);
   }
 
-  componentDidMount() {
-    const { query } = this.state;
-    this.fetchQuery(query);
-  }
-
   fetchQuery() {
     const { query } = this.state;
     fetch(`${PATH_BASE}?q=${query}`)
