@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Button from './Button';
-import BookDisplay from './BookDisplay';
+// import BookDisplay from './BookDisplay';
 
 const PATH_BASE = 'https://www.googleapis.com/books/v1/volumes';
 
@@ -13,7 +13,6 @@ export default class Search extends Component {
     };
     this.fetchQuery = this.fetchQuery.bind(this);
     this.onSearchChange = this.onSearchChange.bind(this);
-    // this.onSearchSubmit = this.onSearchSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -32,12 +31,6 @@ export default class Search extends Component {
       });
   }
 
-  // onSearchSubmit(event) {
-  //   const { query } = this.state;
-  //   this.fetchQuery(query);
-  //   event.preventDefault();
-  // }
-
   onSearchChange(event) {
     this.setState({ query: event.target.value.trim() });
   }
@@ -50,10 +43,8 @@ export default class Search extends Component {
           type="text"
           placeholder="Search for books..."
           onChange={this.onSearchChange}
-          // onSubmit={this.onSearchSubmit}
         />
         <Button onClick={() => this.fetchQuery(query)}>Search</Button>
-        <BookDisplay items={this.state.query} />
       </div>
     );
   }
