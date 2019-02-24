@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from './Button';
-// import BookDisplay from './BookDisplay';
+import BookDisplay from './BookDisplay';
+import ErrorBoundary from './ErrorBoundary';
 
 const PATH_BASE = 'https://www.googleapis.com/books/v1/volumes';
 
@@ -41,10 +42,14 @@ export default class Search extends Component {
       <div className="form">
         <input
           type="text"
-          placeholder="Search for books..."
+          placeholder="Seach by author, title, or ISBN"
           onChange={this.onSearchChange}
         />
         <Button onClick={() => this.fetchQuery(query)}>Search</Button>
+        {/* <p>{JSON.stringify(this.state.items[0])}</p> */}
+        {/* <ErrorBoundary>
+          <BookDisplay items={this.state.items} />
+        </ErrorBoundary> */}
       </div>
     );
   }

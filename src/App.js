@@ -24,8 +24,8 @@ class App extends Component {
   }
 }
 
-const Message = () => {
-  return <p>There's nothing here yet! Try searching for a book.</p>;
-};
+const Message = () => (
+  <p>There's nothing here yet! Try searching for a book.</p>
+);
 
 export default App;
