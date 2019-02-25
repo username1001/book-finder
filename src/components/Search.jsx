@@ -42,7 +42,7 @@ export default class Search extends Component {
       <div className="form">
         <input
           type="text"
-          placeholder="Seach by author, title, or ISBN"
+          placeholder="Search by author, title, or ISBN"
           onChange={this.onSearchChange}
         />
         <Button onClick={() => this.fetchQuery(query)}>Search</Button>
