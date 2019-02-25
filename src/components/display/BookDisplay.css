@@ -1,7 +1,6 @@
 .books {
   display: inline-block;
   width: 200px;
-  /* height: 200px; */
   padding: 10px;
   margin: 5px;
   margin-bottom: 10px;
@@ -9,6 +8,11 @@
   text-align: left;
   position: relative;
 }
+
+.books h2 {
+  color: #282c34;
+}
+
 .books a {
   text-decoration: none;
   color: #fff;

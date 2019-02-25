@@ -16,23 +16,12 @@ const BookDisplay = props => {
         } = item.volumeInfo;
         return (
           <div className="books">
-            <img
-              src={imageLinks.thumbnail}
-              alt={title}
-              className="book-img"
-              key={imageLinks}
-            />
+            <img src={imageLinks.thumbnail} alt={title} className="book-img" />
             <h2 key={title}>{title}</h2>
-            <p className="author" key={authors}>
-              {authors}
-            </p>
-            <p className="publisher" key={publisher}>
-              {publisher}
-            </p>
+            <p className="author">{authors}</p>
+            <p className="publisher">{publisher}</p>
             <Button>
-              <a href={infoLink} key={infoLink}>
-                Visit
-              </a>
+              <a href={infoLink}>Visit</a>
             </Button>
           </div>
         );

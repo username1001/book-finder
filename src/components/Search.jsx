@@ -44,8 +44,15 @@ export default class Search extends Component {
           type="text"
           placeholder="Search by author, title, or ISBN"
           onChange={this.onSearchChange}
+          onKeyPress={event => {
+            if (!this.state.query) {
+              return;
+            }
+            if ('Enter' === event.key) this.fetchQuery(query);
+          }}
         />
         <Button onClick={() => this.fetchQuery(query)}>Search</Button>
+        {this.state.items === [] && <p>Loading...</p>}
         <ErrorBoundary>
           <BookDisplay items={this.state.items} />
         </ErrorBoundary>
