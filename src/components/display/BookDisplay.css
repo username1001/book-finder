@@ -15,9 +15,10 @@
 
 .books a {
   text-decoration: none;
-  color: #fff;
 }
-
+.books a:hover {
+  text-decoration: underline;
+}
 .author {
   font-weight: 900;
 }

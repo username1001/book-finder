@@ -9,10 +9,9 @@ class App extends Component {
     return (
       <div>
         <header>
-          <i className="fa fa-bars" style={{ float: 'right' }} />
           <h1>BOOK FINDER</h1>
           <p>Find all of your favorite books!</p>
-          {/* <DarkTheme /> */}
+          <DarkTheme />
         </header>
         <div className="search-area">
           <Search />

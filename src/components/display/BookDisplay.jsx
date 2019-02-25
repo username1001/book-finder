@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../Button';
 import './BookDisplay.css';
 
 const BookDisplay = props => {
@@ -20,9 +19,7 @@ const BookDisplay = props => {
             <h2 key={title}>{title}</h2>
             <p className="author">{authors}</p>
             <p className="publisher">{publisher}</p>
-            <Button>
-              <a href={infoLink}>Visit</a>
-            </Button>
+            <a href={infoLink}>Visit</a>
           </div>
         );
       })}

@@ -54,6 +54,7 @@ export default class Search extends Component {
         <Button onClick={() => this.fetchQuery(query)}>Search</Button>
         {this.state.items === [] && <p>Loading...</p>}
         <ErrorBoundary>
+          {this.props.items && <p>Loading...</p>}
           <BookDisplay items={this.state.items} />
         </ErrorBoundary>
       </div>

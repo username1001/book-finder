@@ -35,13 +35,19 @@ class DarkTheme extends Component {
     this.css = `  
     body {background-color: #333;}
     footer {color: #fff;}
-    footer a { color: }`;
+    footer a { color: }
+    .books h2, p {color: white;}
+    a {color: #239093;}`;
     return (
       <div>
-        <button aria-pressed={this.isActive()} onClick={this.toggleMode}>
+        <Button
+          aria-pressed={this.isActive()}
+          onClick={this.toggleMode}
+          className="dark-btn"
+        >
           dark theme:{' '}
           <span aria-hidden="true">{this.isActive() ? 'on' : 'off'}</span>
-        </button>
+        </Button>
         <style media={this.isActive() ? 'screen' : 'none'}>{this.css}</style>
       </div>
     );
